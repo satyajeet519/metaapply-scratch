@@ -52,7 +52,8 @@ jobs:
         with:
           app-name: 'strapi-backend'
           slot-name: 'Production'
-          package: ./metaapply-backend
+          package: .
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D0A1936923C4DE780710C43C8A39720 }}
+
 
