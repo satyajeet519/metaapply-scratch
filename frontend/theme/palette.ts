@@ -36,7 +36,7 @@ const palette = {
   violet: {
     50: "#FCF8FF",
     100: "#EDD9FF",
-    200: "#DBAFFF",
+    200: "#DFBAFF",
     300: "#C7A3E5",
     400: "#AF8DCC",
     500: "#9777B2",
@@ -63,7 +63,7 @@ const palette = {
     100: "#FFBCD7",
     200: "#FF8EBC",
     300: "#FF5FA0",
-    400: "#F73185",
+    400: "#FF3185",
     500: "#DD1F6C",
     600: "#BB1056",
     700: "#990541",

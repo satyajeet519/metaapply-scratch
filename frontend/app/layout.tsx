@@ -4,15 +4,19 @@ import "./globals.css";
 
 import Header from "@/components/layout/Header";
 import { getServices } from "@/services/httpServices";
+import ThemeProviderWrapper from "@/theme/ThemeProviderWrapper";
 
-const geistSans = Plus_Jakarta_Sans({
-  variable: "--font-geist-sans",
+
+const headingFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
 });
 
-const geistMono = Open_Sans({
-  variable: "--font-geist-mono",
+const bodyFont = Open_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -31,10 +35,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
-        <Header menus={menus}/>
-        {children} 
+        <ThemeProviderWrapper>
+          <Header menus={menus}/>
+          {children} 
+        </ThemeProviderWrapper>
+          
+        
       </body>
     </html>
   );

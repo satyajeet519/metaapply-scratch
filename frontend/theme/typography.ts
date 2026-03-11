@@ -1,0 +1,154 @@
+const typography = {
+
+  fontFamily: "var(--font-body)",
+
+  /* DISPLAY */
+
+  display00: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "92px",
+    fontWeight: 700,
+    lineHeight: 1.2
+  },
+
+  display01: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "80px",
+    fontWeight: 700,
+    lineHeight: 1.2
+  },
+
+  display02: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "72px",
+    fontWeight: 700,
+    lineHeight: 1.2
+  },
+
+  /* HEADINGS */
+
+  heading03: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "68px",
+    fontWeight: 700
+  },
+
+  heading04: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "60px",
+    fontWeight: 700
+  },
+
+  heading05: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "52px",
+    fontWeight: 700
+  },
+
+  heading06: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "48px",
+    fontWeight: 700
+  },
+
+  heading07: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "40px",
+    fontWeight: 700
+  },
+
+  heading08: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "36px",
+    fontWeight: 700
+  },
+
+  heading09: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "32px",
+    fontWeight: 700
+  },
+
+  heading10: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "28px",
+    fontWeight: 700
+  },
+
+  heading11: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "24px",
+    fontWeight: 700
+  },
+
+  heading12: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "20px",
+    fontWeight: 700
+  },
+
+  heading13: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "18px",
+    fontWeight: 700
+  },
+
+  heading14: {
+    fontFamily: "var(--font-heading)",
+    fontSize: "16px",
+    fontWeight: 700
+  },
+
+  /* BODY */
+
+  body01: {
+    fontFamily: "var(--font-body)",
+    fontSize: "28px",
+    fontWeight: 400
+  },
+
+  body02: {
+    fontFamily: "var(--font-body)",
+    fontSize: "24px",
+    fontWeight: 400
+  },
+
+  body03: {
+    fontFamily: "var(--font-body)",
+    fontSize: "20px",
+    fontWeight: 400
+  },
+
+  body04: {
+    fontFamily: "var(--font-body)",
+    fontSize: "18px",
+    fontWeight: 400
+  },
+
+  body05: {
+    fontFamily: "var(--font-body)",
+    fontSize: "16px",
+    fontWeight: 400
+  },
+
+  body06: {
+    fontFamily: "var(--font-body)",
+    fontSize: "14px",
+    fontWeight: 400
+  },
+
+  body07: {
+    fontFamily: "var(--font-body)",
+    fontSize: "12px",
+    fontWeight: 400
+  },
+
+  body08: {
+    fontFamily: "var(--font-body)",
+    fontSize: "10px",
+    fontWeight: 400
+  }
+
+};
+
+export default typography;
