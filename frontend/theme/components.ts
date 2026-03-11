@@ -16,7 +16,7 @@ const components = {
 
       containedPrimary: {
         backgroundColor: palette.pink[400],
-        color: "#fff",
+        color: palette.common.white,
 
         "&:hover": {
           backgroundColor: palette.pink[500],
