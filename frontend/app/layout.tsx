@@ -29,7 +29,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const menuResponse = await getServices("/menus");
+  const menuResponse = await getServices("/menus?sort=Order:asc");
   const menus = menuResponse?.data?.data;
 
   return (

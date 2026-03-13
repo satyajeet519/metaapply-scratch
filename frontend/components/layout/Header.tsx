@@ -1,39 +1,54 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { AppBar, Toolbar, Typography, Button, Box, IconButton, Menu, MenuItem, Container } from "@mui/material";
 import Image from "next/image";
-import Mielogo from '../../public/Header/mie-logo.svg'
+import { AppBar, Toolbar, Typography, Button, Box, Container } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+type Menu = {
+  id: number;
+  Title: string;
+  Slug: string;
+  Type: string;
+  Link?: string;
+}
 
 type HeaderProps = {
-  menus: any[];
+  menus: Menu[];
 };
 
 export default function Header({ menus }: HeaderProps) {
-  const [anchorEl, setAnchorEl] = useState([])
-
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
-      <Toolbar sx={{ justifyContent: "space-between" }}>
-
-        {/* Logo */}
-        <Link href="/"> <Image src={Mielogo} alt="Metaapply"/> </Link>
-        {/* Navigation */}
-        <Box sx={{ display: "flex", gap: 3 }}>
-          {menus?.map((menu: any) => (
-            <Typography key={menu.id}>
-              {menu.attributes?.title}
-            </Typography>
-          ))}
-        </Box>
-
-        {/* CTA Button */}
-        <Button variant="outlined" color="primary">
-          Book 1:1 Counselling
-        </Button>
-
-      </Toolbar>
+    <AppBar position="sticky" elevation={0} sx={{backgroundColor: "white"}}>
+      <Container maxWidth="xl">
+        <Toolbar sx={{ justifyContent: "space-between", py: 1 }}>
+          <Box>
+            <Link href="/">
+              <Image src="/Header/mie-logo.svg" alt="MetaApply Logo" width={193} height={62}></Image>
+            </Link>
+          </Box>
+          <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", gap: 3 }}>
+            <Button variant="outlined" color="primary">Book 1:1 Counselling</Button>
+            {menus?.map((menu)=>(
+              <Box key={menu.id}>
+                <Typography variant="heading14" color="text.primary" sx={{fontWeight: 500}}>
+                  <Link href={menu.Slug}>
+                    {menu.Title}
+                  </Link>
+                </Typography>
+                {menu.Type === "mega" && (
+                  <ExpandMoreIcon sx={{ fontSize: 25, color: "text.primary", pb: "1px" }} />
+                )}
+              </Box>
+            ))}
+          </Box>
+          <Box sx={{display: "flex", justifyContent: "space-between", gap: 2}}>
+            <Button variant="outlined" color="secondary">EN</Button>
+            <Button variant="outlined" color="primary">Sign In</Button>
+          </Box>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 }
