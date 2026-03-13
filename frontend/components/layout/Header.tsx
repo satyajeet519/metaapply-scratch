@@ -1,22 +1,24 @@
 "use client";
 
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
+import { useState } from "react";
+import Link from "next/link";
+import { AppBar, Toolbar, Typography, Button, Box, IconButton, Menu, MenuItem, Container } from "@mui/material";
+import Image from "next/image";
+import Mielogo from '../../public/Header/mie-logo.svg'
 
-export default function Header({ menus }: any) {
+type HeaderProps = {
+  menus: any[];
+};
+
+export default function Header({ menus }: HeaderProps) {
+  const [anchorEl, setAnchorEl] = useState([])
 
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       <Toolbar sx={{ justifyContent: "space-between" }}>
 
         {/* Logo */}
-        <Typography variant="display00" component="h1">
-          MetaApply
-        </Typography>
-
+        <Link href="/"> <Image src={Mielogo} alt="Metaapply"/> </Link>
         {/* Navigation */}
         <Box sx={{ display: "flex", gap: 3 }}>
           {menus?.map((menu: any) => (

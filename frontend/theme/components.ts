@@ -2,12 +2,15 @@ import palette from "./palette";
 
 const components = {
   MuiButton: {
+    defaultProps: {
+      disableElevation: true,
+    },
     styleOverrides: {
       root: {
-        borderRadius: "12px",
+        borderRadius: 12,
         padding: "12px 20px",
         textTransform: "none",
-        fontSize: "16px",
+        fontSize: 16,
         fontWeight: 600,
         lineHeight: "20px",
         letterSpacing: "-0.16px",
