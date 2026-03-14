@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import { getServices } from "@/services/httpServices";
 import ThemeProviderWrapper from "@/theme/ThemeProviderWrapper";
+import ThemeRegistry from "@/theme/ThemeRegistry";
 
 
 const headingFont = Plus_Jakarta_Sans({
@@ -44,12 +45,12 @@ export default async function RootLayout({
       <body suppressHydrationWarning
         className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
-        <ThemeProviderWrapper>
-          <Header menus={menus}/>
-          {children} 
-        </ThemeProviderWrapper>
-          
-        
+        <ThemeRegistry>
+          <ThemeProviderWrapper>
+            <Header menus={menus}/>
+            {children} 
+          </ThemeProviderWrapper>
+        </ThemeRegistry>
       </body>
     </html>
   );

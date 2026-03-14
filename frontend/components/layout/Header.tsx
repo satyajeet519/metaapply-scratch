@@ -29,23 +29,25 @@ export default function Header({ menus }: HeaderProps) {
             </Link>
           </Box>
           <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", gap: 3 }}>
-            <Button variant="outlined" color="primary">Book 1:1 Counselling</Button>
-            {menus?.map((menu)=>(
-              <Box key={menu.id}>
-                <Typography variant="heading14" color="text.primary" sx={{fontWeight: 500}}>
-                  
-                    {menu.Title}
-                  
-                </Typography>
-                {menu.Type === "mega" && (
-                  <ExpandMoreIcon sx={{ fontSize: 25, color: "text.primary", pb: "1px" }} />
-                )}
-              </Box>
-            ))}
-          </Box>
-          <Box sx={{display: "flex", justifyContent: "space-between", gap: 2}}>
-            <Button variant="outlined" color="secondary">EN</Button>
-            <Button variant="outlined" color="primary">Sign In</Button>
+            <Box sx={{display: "flex", justifyContent: "space-between", alignItems: "center", gap: 3 }}>
+              <Button variant="outlined" color="primary">Book 1:1 Counselling</Button>
+              {menus?.map((menu)=>(
+                <Box key={menu.id}>
+                  <Typography variant="heading14" color="text.primary" sx={{fontWeight: 500}}>
+                    
+                      {menu.Title}
+                    
+                  </Typography>
+                  {menu.Type === "mega" && (
+                    <ExpandMoreIcon sx={{ fontSize: 25, color: "text.primary", pb: "1px" }} />
+                  )}
+                </Box>
+              ))}
+            </Box>
+            <Box sx={{display: "flex", justifyContent: "space-between", gap: 2}}>
+              <Button variant="outlined" color="secondary">EN</Button>
+              <Button variant="outlined" color="primary">Sign In</Button>
+            </Box>
           </Box>
         </Toolbar>
       </Container>
