@@ -34,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body
+      <body suppressHydrationWarning
         className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
       >
         <ThemeProviderWrapper>
