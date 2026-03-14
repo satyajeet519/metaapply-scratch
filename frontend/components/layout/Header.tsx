@@ -33,9 +33,9 @@ export default function Header({ menus }: HeaderProps) {
             {menus?.map((menu)=>(
               <Box key={menu.id}>
                 <Typography variant="heading14" color="text.primary" sx={{fontWeight: 500}}>
-                  <Link href={menu.Slug}>
+                  
                     {menu.Title}
-                  </Link>
+                  
                 </Typography>
                 {menu.Type === "mega" && (
                   <ExpandMoreIcon sx={{ fontSize: 25, color: "text.primary", pb: "1px" }} />
