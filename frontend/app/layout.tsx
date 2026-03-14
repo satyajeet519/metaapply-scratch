@@ -22,6 +22,11 @@ const bodyFont = Open_Sans({
 export const metadata: Metadata = {
   title: "MetaApply",
   description: "Study Abroad Platform",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export const dynamic = "force-dynamic";
